@@ -22,7 +22,7 @@ if %branchFound%==true (
 
     git add *
     git commit -m "Deployed new version"
-    git push origin gh-pages
+    git push origin gh-pages --force
     git checkout master
 
     echo Deployment done!
