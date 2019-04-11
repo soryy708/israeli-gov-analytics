@@ -293,4 +293,11 @@ $(function() {
     $('#partyByKnesset input[type="range"]').attr('max', richParliaments.length-1);
     $('#partyByKnesset input[type="range"]').change(onPartyByKnessetChartControlUpdate);
     $('#partyByKnesset select').change(onPartyByKnessetChartControlUpdate);
+
+    setTimeout(function() {
+        $('#unfinishednessPopup').css('display', 'block');
+    }, 5000);
+    $('#unfinishednessPopup .closeBtn').click(function() {
+        $('#unfinishednessPopup').css('display', 'none');
+    });
 });
