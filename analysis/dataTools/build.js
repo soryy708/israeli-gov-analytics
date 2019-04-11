@@ -12,6 +12,5 @@ const fs = require('fs');
 
 const outputFile = '../data.js';
 
-if(validate.start()) { // Validation passed successfully
-    fs.writeFileSync(outputFile, `var parliaments=${JSON.stringify(parliaments)};var parties=${JSON.stringify(parties)}`);
-}
+validate.start();
+fs.writeFileSync(outputFile, `var parliaments=${JSON.stringify(parliaments)};var parties=${JSON.stringify(parties)}`);
