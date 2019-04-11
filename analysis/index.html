@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Israeli Government Analytics</title>
+        <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet"> 
+        <link href="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.css" rel="stylesheet"></link>
+        <link href="style.css" rel="stylesheet"></link>
+    </head>
+    <body dir="rtl">
+        <h1>כלי ניתוח הממשלות הישראליות</h1>
+
+        <div id="partyByKnesset">
+            <h2>מפלגות לפי כנסת</h2>
+            <div class="chartContainer">
+                <canvas class="chart" width="600" height="400"></canvas>
+            </div>
+            <div class="sliderContainer">
+                <label>כנסת <span class="value">#1</span></label>
+                <input type="range" min="0" max="8" value="0"/>
+            </div>
+            <div class="selectContainer">
+                <select>
+                    <option>אחוז מצביעים</option>
+                    <option>מספר מנדטים</option>
+                    <option>מספר מושבים (בסוף הכהונה)</option>
+                </select>
+            </div>
+        </div>
+
+        <hr/>
+
+        <div id="numPartiesByKnesset">
+            <h2>מספר מפלגות לפי כנסת</h2>
+            <div class="chartContainer">
+                <canvas class="chart" width="600" height="400"></canvas>
+            </div>
+        </div>
+
+        <hr/>
+
+        <div id="attributeTrends">
+            <h2>מאפיינים לפי כנסת</h2>
+            <div class="chartContainer">
+                <canvas class="chart" width="600" height="400"></canvas>
+            </div>
+            <div class="selectContainer">
+                <select>
+                    <option>אחוז מצביעים</option>
+                    <option>מספר מנדטים</option>
+                    <option>מספר מושבים (בסוף הכהונה)</option>
+                </select>
+            </div>
+        </div>
+
+        <hr/>
+
+        <div id="orientationTrends">
+            <h2>אוריינטציה לפי כנסת</h2>
+            <div class="chartContainer">
+                <canvas class="chart" width="600" height="400"></canvas>
+            </div>
+            <div class="selectContainer">
+                <select>
+                    <option>אחוז מצביעים</option>
+                    <option>מספר מנדטים</option>
+                    <option>מספר מושבים (בסוף הכהונה)</option>
+                </select>
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.bundle.min.js"></script>
+        <script src="data.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
