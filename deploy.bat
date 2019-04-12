@@ -13,17 +13,26 @@ for /f %%b in ('git branch') do (
 )
 
 if %branchFound%==true (
+    echo Rebasing gh-pages branch to master
     git checkout gh-pages
     git rebase master
 
+    echo Building data artifact
     cd analysis/dataTools
     node build
     cd ../..
 
+    echo Delivering artifacts
+    rem Commit any changes made to normally untracked artifacts
     git add *
     git commit -m "Deployed new version"
     git push origin gh-pages --force
+
+    echo Cleaning up
     git checkout master
+    cd analysis/dataTools
+    node build
+    cd ../..
 
     echo Deployment done!
 
