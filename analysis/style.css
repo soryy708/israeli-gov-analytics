@@ -129,6 +129,10 @@ hr {
     font-size: 1rem;
 }
 
+.scrollReveal {
+    visibility: hidden;
+}
+
 #i18nBar {
     position: fixed;
     top: 0;

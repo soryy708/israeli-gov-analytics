@@ -11,7 +11,7 @@
     <body>
         <h1>{{i18n.mainTitle}}</h1>
 
-        <div id="partyByParliament">
+        <div id="partyByParliament" class="scrollReveal">
             <h2>{{i18n.partyByParliamentTitle}}</h2>
             <div class="chartContainer">
                 <canvas class="chart" width="600" height="400"></canvas>
@@ -31,7 +31,7 @@
 
         <hr/>
 
-        <div id="numPartiesByParliament">
+        <div id="numPartiesByParliament" class="scrollReveal">
             <h2>{{i18n.numPartiesByParliamentTitle}}</h2>
             <div class="chartContainer">
                 <canvas class="chart" width="600" height="400"></canvas>
@@ -40,7 +40,7 @@
 
         <hr/>
 
-        <div id="attributeTrends">
+        <div id="attributeTrends" class="scrollReveal">
             <h2>{{i18n.attributeTrendsTitle}}</h2>
             <div class="chartContainer">
                 <canvas class="chart" width="600" height="400"></canvas>
@@ -56,7 +56,7 @@
 
         <hr/>
 
-        <div id="orientationTrends">
+        <div id="orientationTrends" class="scrollReveal">
             <h2>{{i18n.orientationTrendsTitle}}</h2>
             <div class="chartContainer">
                 <canvas class="chart" width="600" height="400"></canvas>
@@ -110,6 +110,7 @@
 
         <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.bundle.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
         <script src="i18n.he.js"></script>
         <script src="i18n.en.js"></script>
         <script src="i18n.js"></script>

@@ -304,6 +304,11 @@ $(function() {
         onPartyByParliamentChartControlUpdate();
     });
 
+    ScrollReveal().reveal('.scrollReveal', {
+        delay: 50,
+        duration: 1000,
+    });
+
     setTimeout(function() {
         $('#unfinishednessPopup').css('display', 'block');
     }, 5000);
