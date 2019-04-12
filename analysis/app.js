@@ -40,17 +40,17 @@ $(function() {
 
     function partyValueFromDataType(dataType, party) {
         switch (dataType) {
-            case 'אחוז מצביעים':
+            case 'votersPercent':
                 return party.votersPercent;
 
-            case 'מספר מנדטים':
+            case 'mandatesCount':
                 return party.mandates;
 
-            case 'מספר מושבים (בסוף הכהונה)':
+            case 'seatsCount':
                 return party.endSeats;
 
             default:
-                console.error('Invalid dataType');
+                console.error('Invalid dataType:', dataType);
         }
     }
 
@@ -65,12 +65,12 @@ $(function() {
             return Object.keys(parliament.parties).length;
         });
 
-        updateChart('#numPartiesByKnesset .chart', {
+        updateChart('#numPartiesByParliament .chart', {
             type: 'bar',
             data: {
                 labels: Array(richParliaments.length).fill().map(function(v, i) { return i+1; }),
                 datasets: [{
-                    label: 'מספר מפלגות',
+                    label: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].partiesCount || 'מספר מפלגות',
                     backgroundColor: 'royalblue',
                     data: data
                 }]
@@ -81,7 +81,7 @@ $(function() {
                     yAxes: [{
                         scaleLabel: {
                             display: true,
-                            labelString: 'מספר מפלגות'
+                            labelString: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].partiesCount || 'מספר מפלגות'
                         },
                         ticks: {
                             min: 0
@@ -90,7 +90,7 @@ $(function() {
                     xAxes: [{
                         scaleLabel: {
                             display: true,
-                            labelString: 'כנסת'
+                            labelString: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].parliament || 'כנסת'
                         }
                     }]
                 }
@@ -130,19 +130,19 @@ $(function() {
             data: {
                 labels: Array(richParliaments.length).fill().map(function(v, i) { return i+1; }),
                 datasets: [{
-                    label: 'אחר',
+                    label: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].otherLabel || 'אחר',
                     borderColor: 'green',
                     data: otherParties
                 }, {
-                    label: 'ימין',
+                    label: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].rightLabel || 'ימין',
                     borderColor: 'royalblue',
                     data: rightParties
                 }, {
-                    label: 'שמאל',
+                    label: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].leftLabel || 'שמאל',
                     borderColor: 'orange',
                     data: leftParties
                 }, {
-                    label: 'מרכז',
+                    label: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].centerLabel || 'מרכז',
                     borderColor: 'white',
                     data: centerParties
                 }]
@@ -152,24 +152,25 @@ $(function() {
                     yAxes: [{
                         scaleLabel: {
                             display: true,
-                            labelString: dataType
+                            labelString: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang][dataType] || dataType
                         }
                     }],
                     xAxes: [{
                         scaleLabel: {
                             display: true,
-                            labelString: 'כנסת'
+                            labelString: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].parliament || 'כנסת'
                         }
                     }]
                 }
             }
         });
     }
-    updateOrientationTrendsChart('אחוז מצביעים');
-    $('#orientationTrends select').change(function() {
-        var dataType = $(this).val();
+    updateOrientationTrendsChart('votersPercent');
+    function onOrientationTrendsChartControlUpdate() {
+        var dataType = $('#orientationTrends select').val();
         updateOrientationTrendsChart(dataType);
-    });
+    }
+    $('#orientationTrends select').change(onOrientationTrendsChartControlUpdate);
 
     function updateAttributeTrendsChart(dataType) {
         var otherParties = calculateValuesFromParliaments(dataType, function(dataType, party) {
@@ -208,23 +209,23 @@ $(function() {
             data: {
                 labels: Array(richParliaments.length).fill().map(function(v, i) { return i+1; }),
                 datasets: [{
-                    label: 'אחר',
+                    label: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].otherLabel || 'אחר',
                     borderColor: 'royalblue',
                     data: otherParties
                 }, {
-                    label: 'ערבי',
+                    label: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].arabicLabel || 'ערבי',
                     borderColor: 'green',
                     data: arabicParties
                 }, {
-                    label: 'דתי',
+                    label: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].religiousLabel || 'דתי',
                     borderColor: 'white',
                     data: religiousParties
                 }, {
-                    label: 'רדיקלי',
+                    label: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].radicalLabel || 'רדיקלי',
                     borderColor: 'orange',
                     data: radicalParties
                 }, {
-                    label: 'סוציאליסטי',
+                    label: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].socialistLabel || 'סוציאליסטי',
                     borderColor: 'red',
                     data: socialistParties
                 }]
@@ -234,27 +235,28 @@ $(function() {
                     yAxes: [{
                         scaleLabel: {
                             display: true,
-                            labelString: dataType
+                            labelString: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang][dataType] || dataType
                         }
                     }],
                     xAxes: [{
                         scaleLabel: {
                             display: true,
-                            labelString: 'כנסת'
+                            labelString: i18n && i18n[i18n.currentLang] && i18n[i18n.currentLang].parliament || 'כנסת'
                         }
                     }]
                 }
             }
         });
     }
-    updateAttributeTrendsChart('אחוז מצביעים');
-    $('#attributeTrends select').change(function() {
-        var dataType = $(this).val();
+    updateAttributeTrendsChart('votersPercent');
+    function onAttributeTrendsChartControlUpdate() {
+        var dataType = $('#attributeTrends select').val();
         updateAttributeTrendsChart(dataType);
-    });
+    }
+    $('#attributeTrends select').change(onAttributeTrendsChartControlUpdate);
 
-    function updatePartyByKnessetChart(knessetIndex, dataType) {
-        var parliament = richParliaments[Number(knessetIndex)];
+    function updatePartyByParliamentChart(parliamentIndex, dataType) {
+        var parliament = richParliaments[Number(parliamentIndex)];
         var partyNames = Object.keys(parliament.parties);
         var data = partyValuesFromDataType(dataType, Object.values(parliament.parties));
         var partyColors = Object.values(parliament.parties).map(function(party) {
@@ -270,9 +272,9 @@ $(function() {
             }
         });
 
-        $('#partyByKnesset label .value').text('#' + (Number(knessetIndex) + 1));
+        $('#partyByParliament label .value').text('#' + (Number(parliamentIndex) + 1));
 
-        updateChart('#partyByKnesset .chart', {
+        updateChart('#partyByParliament .chart', {
             type: 'doughnut',
             data: {
                 labels: partyNames,
@@ -284,15 +286,23 @@ $(function() {
             }
         });
     }
-    updatePartyByKnessetChart(0, 'אחוז מצביעים');
-    function onPartyByKnessetChartControlUpdate() {
-        var knessetIndex = $('#partyByKnesset input[type="range"]').val();
-        var dataType = $('#partyByKnesset select').val();
-        updatePartyByKnessetChart(knessetIndex, dataType);
+    updatePartyByParliamentChart(0, 'votersPercent');
+    function onPartyByParliamentChartControlUpdate() {
+        var parliamentIndex = $('#partyByParliament input[type="range"]').val();
+        var dataType = $('#partyByParliament select').val();
+        updatePartyByParliamentChart(parliamentIndex, dataType);
     }
-    $('#partyByKnesset input[type="range"]').attr('max', richParliaments.length-1);
-    $('#partyByKnesset input[type="range"]').change(onPartyByKnessetChartControlUpdate);
-    $('#partyByKnesset select').change(onPartyByKnessetChartControlUpdate);
+    $('#partyByParliament input[type="range"]').attr('max', richParliaments.length-1);
+    $('#partyByParliament input[type="range"]').change(onPartyByParliamentChartControlUpdate);
+    $('#partyByParliament select').change(onPartyByParliamentChartControlUpdate);
+
+    addI18nChangeListener(function() {
+        // Update all charts to apply i18n to labels
+        updateNumPartiesChart();
+        onOrientationTrendsChartControlUpdate();
+        onAttributeTrendsChartControlUpdate();
+        onPartyByParliamentChartControlUpdate();
+    });
 
     setTimeout(function() {
         $('#unfinishednessPopup').css('display', 'block');

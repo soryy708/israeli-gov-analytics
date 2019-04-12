@@ -8,31 +8,31 @@
         <link href="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.css" rel="stylesheet"></link>
         <link href="style.css" rel="stylesheet"></link>
     </head>
-    <body dir="rtl">
-        <h1>כלי ניתוח הממשלות הישראליות</h1>
+    <body>
+        <h1>{{i18n.mainTitle}}</h1>
 
-        <div id="partyByKnesset">
-            <h2>מפלגות לפי כנסת</h2>
+        <div id="partyByParliament">
+            <h2>{{i18n.partyByParliamentTitle}}</h2>
             <div class="chartContainer">
                 <canvas class="chart" width="600" height="400"></canvas>
             </div>
             <div class="sliderContainer">
-                <label>כנסת <span class="value">#1</span></label>
+                <label>{{i18n.parliament}} <span class="value">#1</span></label>
                 <input type="range" min="0" max="8" value="0"/>
             </div>
             <div class="selectContainer">
                 <select>
-                    <option>אחוז מצביעים</option>
-                    <option>מספר מנדטים</option>
-                    <option>מספר מושבים (בסוף הכהונה)</option>
+                    <option value="votersPercent">{{i18n.votersPercent}}</option>
+                    <option value="mandatesCount">{{i18n.mandatesCount}}</option>
+                    <option value="seatsCount">{{i18n.seatsCount}}</option>
                 </select>
             </div>
         </div>
 
         <hr/>
 
-        <div id="numPartiesByKnesset">
-            <h2>מספר מפלגות לפי כנסת</h2>
+        <div id="numPartiesByParliament">
+            <h2>{{i18n.numPartiesByParliamentTitle}}</h2>
             <div class="chartContainer">
                 <canvas class="chart" width="600" height="400"></canvas>
             </div>
@@ -41,15 +41,15 @@
         <hr/>
 
         <div id="attributeTrends">
-            <h2>מאפיינים לפי כנסת</h2>
+            <h2>{{i18n.attributeTrendsTitle}}</h2>
             <div class="chartContainer">
                 <canvas class="chart" width="600" height="400"></canvas>
             </div>
             <div class="selectContainer">
                 <select>
-                    <option>אחוז מצביעים</option>
-                    <option>מספר מנדטים</option>
-                    <option>מספר מושבים (בסוף הכהונה)</option>
+                    <option value="votersPercent">{{i18n.votersPercent}}</option>
+                    <option value="mandatesCount">{{i18n.mandatesCount}}</option>
+                    <option value="seatsCount">{{i18n.seatsCount}}</option>
                 </select>
             </div>
         </div>
@@ -57,50 +57,63 @@
         <hr/>
 
         <div id="orientationTrends">
-            <h2>אוריינטציה לפי כנסת</h2>
+            <h2>{{i18n.orientationTrendsTitle}}</h2>
             <div class="chartContainer">
                 <canvas class="chart" width="600" height="400"></canvas>
             </div>
             <div class="selectContainer">
                 <select>
-                    <option>אחוז מצביעים</option>
-                    <option>מספר מנדטים</option>
-                    <option>מספר מושבים (בסוף הכהונה)</option>
+                    <option value="votersPercent">{{i18n.votersPercent}}</option>
+                    <option value="mandatesCount">{{i18n.mandatesCount}}</option>
+                    <option value="seatsCount">{{i18n.seatsCount}}</option>
                 </select>
             </div>
         </div>
 
         <br/>
         
+        <div id="i18nBar">
+            <button onclick="loadInternationalization('he')">
+                <img src="he-il.png"/>
+                עברית
+            </button>
+            <button onclick="loadInternationalization('en')">
+                <img src="en-gb.png"/>
+                English
+            </button>
+        </div>
+
         <div id="unfinishednessPopup" style="display: none">
             <div class="toolBar">
                 <div class="closeBtn">x</div>
             </div>
             <div class="content">
-                <h2>הניתוח המוצג כאן מתבסס על מידע <u>שאינו מלא</u>!</h2>
+                <h2>{{i18n.unfinishednessPopupTitle}}</h2>
                 <p>
-                    לא ניתן להסתמך על המידע כאן,
-                    ולא ניתן להפיק תובנות.
+                    {{i18n.unfinishednessPopupContent}}
                 </p>
                 <p>
-                    ביכולתך לעזור להשלים את המידע החסר. לחץ על הכפתור למטה:
+                    {{i18n.unfinishednessPopupCta}}
                 </p>
                 <a
                     href="https://github.com/soryy708/israeli-gov-analytics/labels/data%20entry"
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <button>עזור לפיתוח</button>
+                    <button>{{i18n.unfinishednessPopupButton}}</button>
                 </a>
                 <p>
-                    <a href="#" class="closeBtn">סגור חלון זה</a>
+                    <a href="#" class="closeBtn">{{i18n.unfinishednessPopupClose}}</a>
                 </p>
             </div>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.bundle.min.js"></script>
+        <script src="i18n.he.js"></script>
+        <script src="i18n.en.js"></script>
+        <script src="i18n.js"></script>
         <script src="data.js"></script>
-        <script src="app.js"></script>
+        <script src="app.js"></script> <!-- Should be after i18n and data.js -->
     </body>
 </html>

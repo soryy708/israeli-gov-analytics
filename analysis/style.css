@@ -128,3 +128,28 @@ hr {
     border: none;
     font-size: 1rem;
 }
+
+#i18nBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#i18nBar button {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+#i18nBar button:hover {
+    transform: scale(1.05);
+}
+
+#i18nBar button img {
+    display: block;
+    height: 2em;
+}
