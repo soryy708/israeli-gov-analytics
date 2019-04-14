@@ -163,6 +163,11 @@
         "leaders": ["לוי אשכול", "גולדה מאיר"],
         "socialist": true
     },
+    "מרדכי בן-פורת (נבחר מטעם המערך)": {
+        "orientation": "left",
+        "leaders": ["לוי אשכול", "גולדה מאיר"],
+        "socialist": true
+    },
     "העולם הזה-כוח חדש": {
         "orientation": "left",
         "leaders": ["אורי אבנרי"],
@@ -215,5 +220,24 @@
         "orientation": null,
         "leaders": ["אברהם מוקוטובסקי", "אברהם זאב טרגר"],
         "religious": true
+    },
+    "הליכוד": {
+        "orientation": "right",
+        "leaders": ["מנחם בגין", "יצחק שמיר", "אריאל שרון", "בנימין נתניהו"],
+        "color": "#1f5aa5"
+    },
+    "ר\"ץ": {
+        "orientation": "left",
+        "leaders": ["שלומית אלוני", "יוסי שריד"],
+        "color": "#c20006"
+    },
+    "מוקד": {
+        "orientation": "left",
+        "leaders": ["שמואל מיקוניס", "מאיר פעיל"]
+    },
+    "רשימה ערבית לבדואים וכפריים": {
+        "orientation": null,
+        "leaders": ["חמאד אבו רביעה"],
+        "arabic": true
     }
 }
