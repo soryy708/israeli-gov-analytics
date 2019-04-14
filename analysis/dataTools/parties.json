@@ -143,6 +143,12 @@
         "color": "#3030cd",
         "socialist": true
     },
+    "בן-גוריון (נבחר מטעם רפ\"י)": {
+        "orientation": "left",
+        "leaders": ["דוד בן-גוריון"],
+        "color": "#3030cd",
+        "socialist": true
+    },
     "ל\"ע": {
         "orientation": "center",
         "leaders": ["משה קול", "גדעון האוזנר", "יצחק ארצי"]
@@ -160,5 +166,19 @@
     "המרכז החופשי": {
         "orientation": "right",
         "leaders": ["שמואל תמיר"]
+    },
+    "מפלגה ליברלית": {
+        "orientation": "right",
+        "leaders": ["פרץ ברנשטיין", "שמחה ארליך"]
+    },
+    "האחווה היהודית-ערבית": {
+        "orientation": null,
+        "leaders": ["אליאס נח'לה"],
+        "arabic": true
+    },
+    "הסיעה הדרוזית הישראלית": {
+        "orientation": null,
+        "leaders": ["ג'בר מועדי"],
+        "arabic": true
     }
 }
