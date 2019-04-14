@@ -1,6 +1,6 @@
 {
     "מפא\"י": {
-        "orientation": "right",
+        "orientation": "left",
         "leaders": ["דוד בן-גוריון", "משה שרת", "לוי אשכול"],
         "color": "#af0000",
         "socialist": true
@@ -16,7 +16,8 @@
     },
     "ספרדים ועדות המזרח": {
         "orientation": "center",
-        "leaders": ["בכור שלום שטרית", "אליהו אלישר"]
+        "leaders": ["בכור שלום שטרית", "אליהו אלישר"],
+        "color": "#eb4112"
     },
     "רשימה דמוקרטית של נצרת": {
         "orientation": null,
@@ -25,15 +26,19 @@
     },
     "מפ\"ם": {
         "orientation": "left",
-        "leaders": ["מאיר יערי", "יעקב חזן", "מאיר תלמי", "ויקטור שם-טוב", "יאיר צבן", "חיים אורון"]
+        "leaders": ["מאיר יערי", "יעקב חזן", "מאיר תלמי", "ויקטור שם-טוב", "יאיר צבן", "חיים אורון"],
+        "color": "#ff0000",
+        "socialist": true
     },
     "תנועת החירות": {
         "orientation": "right",
-        "leaders": ["מנחם בגין", "יצחק שמיר"]
+        "leaders": ["מנחם בגין", "יצחק שמיר"],
+        "color": "#0078ba"
     },
     "תנועת החרות": {
         "orientation": "right",
-        "leaders": ["מנחם בגין", "יצחק שמיר"]
+        "leaders": ["מנחם בגין", "יצחק שמיר"],
+        "color": "#0078ba"
     },
     "ציונים כלליים": {
         "orientation": "right",
@@ -42,6 +47,13 @@
     "מק\"י": {
         "orientation": "left",
         "leaders": ["שמואל מיקוניס", "משה סנה"],
+        "color": "#ff0000",
+        "radical": true
+    },
+    "רק\"ח": {
+        "orientation": "left",
+        "leaders": ["שמואל מיקוניס", "משה סנה"],
+        "color": "#ff0000",
         "radical": true
     },
     "רשימת הלוחמים": {
@@ -50,7 +62,8 @@
     },
     "ויצ\"ו": {
         "orientation": null,
-        "leaders": ["רבקה זיו", "הדסה סמואל", "רחל כהן-כגן"]
+        "leaders": ["רבקה זיו", "הדסה סמואל", "רחל כהן-כגן"],
+        "color": "#001745"
     },
     "התאחדות התימנים": {
         "orientation": null,
@@ -92,6 +105,60 @@
     },
     "אחדות העבודה": {
         "orientation": "left",
-        "leaders": ["יצחק טבנקין", "יגאל אלון"]
+        "leaders": ["יצחק טבנקין", "יגאל אלון"],
+        "socialist": true
+    },
+    "חזית דתית לאומית": {
+        "orientation": "right",
+        "leaders": ["חיים משה שפירא", "יוסף בורג", "זבולון המר", "אבנר חי שקאי", "יצחק לוי", "אפי איתם", "זבולון אורלב", "דניאל הרשקוביץ", "נפתלי בנט", "רפי פרץ"],
+        "religious": true
+    },
+    "חזית דתית תורתית": {
+        "orientation": null,
+        "leaders": [],
+        "religious": true
+    },
+    "מפד\"ל": {
+        "orientation": "right",
+        "leaders": ["חיים משה שפירא", "יוסף בורג", "זבולון המר", "אבנר חי שקאי", "יצחק לוי", "אפי איתם", "זבולון אורלב", "דניאל הרשקוביץ", "נפתלי בנט", "רפי פרץ"],
+        "religious": true
+    },
+    "קידמה ופיתוח": {
+        "orientation": null,
+        "leaders": [],
+        "arabic": true
+    },
+    "שיתוף ואחווה": {
+        "orientation": null,
+        "leaders": [],
+        "arabic": true
+    },
+    "גח\"ל": {
+        "orientation": "right",
+        "leaders": ["מנחם בגין"]
+    },
+    "רפ\"י": {
+        "orientation": "left",
+        "leaders": ["דוד בן-גוריון"],
+        "color": "#3030cd",
+        "socialist": true
+    },
+    "ל\"ע": {
+        "orientation": "center",
+        "leaders": ["משה קול", "גדעון האוזנר", "יצחק ארצי"]
+    },
+    "מערך": {
+        "orientation": "left",
+        "leaders": ["לוי אשכול", "גולדה מאיר"],
+        "socialist": true
+    },
+    "העולם הזה-כוח חדש": {
+        "orientation": "left",
+        "leaders": ["אורי אבנרי"],
+        "radical": true
+    },
+    "המרכז החופשי": {
+        "orientation": "right",
+        "leaders": ["שמואל תמיר"]
     }
 }
