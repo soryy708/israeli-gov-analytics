@@ -302,5 +302,37 @@
     "תנועה להתחדשות ציונית חברתית": {
         "orientation": null,
         "leaders": ["מרדכי בן-פורת"]
+    },
+    "רשימה ערבית מאוחדת": {
+        "orientation": null,
+        "arabic": true
+    },
+    "סיעה סוציאל-דמוקרטית": {
+        "orientation": "left",
+        "leaders": ["אריה אליאב"]
+    },
+    "שינוי": {
+        "orientation": "left",
+        "leaders": ["אמנון רובינשטיין", "אברהם פורז", "יוסף לפיד", "רון לוינטל"]
+    },
+    "תחייה": {
+        "orientation": "right",
+        "leaders": ["גאולה כהן", "יובל נאמן"]
+    },
+    "אחווה": {
+        "orientation": null,
+        "leaders": ["שלמה אליהו", "שפיק אסעד", "עקיבא נוף"]
+    },
+    "ישראל אחת (1)": {
+        "orientation": null,
+        "leaders": ["יצחק יצחקי"]
+    },
+    "יעד": {
+        "orientation": null,
+        "leaders": ["אסף יגורי"]
+    },
+    "מפלגת האיחוד": {
+        "orientation": "left",
+        "leaders": ["סעדיה מרציאנו"]
     }
 }
