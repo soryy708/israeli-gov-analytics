@@ -226,6 +226,11 @@
         "leaders": ["מנחם בגין", "יצחק שמיר", "אריאל שרון", "בנימין נתניהו"],
         "color": "#1f5aa5"
     },
+    "יוסף תמיר (נבחר מטעם הליכוד)": {
+        "orientation": "right",
+        "leaders": ["מנחם בגין", "יצחק שמיר", "אריאל שרון", "בנימין נתניהו"],
+        "color": "#1f5aa5"
+    },
     "ר\"ץ": {
         "orientation": "left",
         "leaders": ["שלומית אלוני", "יוסי שריד"],
@@ -239,5 +244,40 @@
         "orientation": null,
         "leaders": ["חמאד אבו רביעה"],
         "arabic": true
+    },
+    "ד\"ש": {
+        "orientation": "center",
+        "leaders": ["יגאל ידין"]
+    },
+    "יגאל ידין (נבחר מטעם ד\"ש)": {
+        "orientation": "center",
+        "leaders": ["יגאל ידין"]
+    },
+    "בנימין הלוי (נבחר מטעם ד\"ש)": {
+        "orientation": "center",
+        "leaders": ["יגאל ידין"]
+    },
+    "שמואל תמיר (נבחר מטעם ד\"ש)": {
+        "orientation": "center",
+        "leaders": ["יגאל ידין"]
+    },
+    "חד\"ש": {
+        "orientation": "left",
+        "leaders": ["מאיר וילנר", "תאופיק טובי", "מוחמד ברכה", "איימן עודה"],
+        "arabic": true,
+        "radical": true,
+        "socialist": true
+    },
+    "פלאטו שרון": {
+        "orientation": "right",
+        "leaders": ["שמואל פלאטו שרון"]
+    },
+    "שלומציון": {
+        "orientation": "right",
+        "leaders": ["אריאל שרון"]
+    },
+    "מחנה של\"י": {
+        "orientation": "left",
+        "leaders": ["אורי אבנרי", "אריה לובה אליאב"]
     }
 }
