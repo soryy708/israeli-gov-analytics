@@ -278,6 +278,13 @@
         "radical": true,
         "socialist": true
     },
+    "חדש-הפנתרים השחורים": {
+        "orientation": "left",
+        "leaders": ["מאיר וילנר", "תאופיק טובי", "מוחמד ברכה", "איימן עודה"],
+        "arabic": true,
+        "radical": true,
+        "socialist": true
+    },
     "פלאטו שרון": {
         "orientation": "right",
         "leaders": ["שמואל פלאטו שרון"]
@@ -334,5 +341,51 @@
     "מפלגת האיחוד": {
         "orientation": "left",
         "leaders": ["סעדיה מרציאנו"]
+    },
+    "התחיה-צומת": {
+        "orientation": "",
+        "leaders": ["יובל נאמן"]
+    },
+    "ש\"ס": {
+        "orientation": null,
+        "leaders": ["אריה דרעי"],
+        "religious": true
+    },
+    "שמעון בן-שלמה (נבחר מטעם ש\"ס)": {
+        "orientation": null,
+        "leaders": ["אריה דרעי"],
+        "religious": true
+    },
+    "יחד": {
+        "orientation": "center",
+        "leaders": ["עזר ויצמן"]
+    },
+    "רשימה המתקדמת לשלום": {
+        "orientation": "left",
+        "leaders": [],
+        "radical": true,
+        "religious": true
+    },
+    "מורשה": {
+        "orientation": "right",
+        "leaders": ["חיים דרוקמן", "אברהם ורדיגר"]
+    },
+    "כך": {
+        "orientation": "right",
+        "leaders": ["מאיר כהנא", "ברוך מרזל"],
+        "radical": true
+    },
+    "אומץ": {
+        "orientation": "right",
+        "leaders": ["יגאל הורביץ"]
+    },
+    "מפלגה דמוקרטית ערבית מד\"ע": {
+        "orientation": null,
+        "leaders": ["עבד אל-והאב דראושה", "טלב א-סאנע"],
+        "arabic": true
+    },
+    "צומת": {
+        "orientation": "right",
+        "leaders": ["רפאל איתן", "אורן חזן", "משה גרין"]
     }
 }
